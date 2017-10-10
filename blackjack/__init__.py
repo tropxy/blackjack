@@ -37,6 +37,7 @@ class Card:
     def __str__(self):
         return repr(self)
 
+
 class Deck:
     """
     A Standard Deck class with 52 cards, 13 cards in each suit
@@ -50,3 +51,30 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.cards)
+
+    def __len__(self):
+        return len(self.cards)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        try:
+            card = self.cards.pop(0)
+            return card
+        except IndexError:
+            raise StopIteration("No more cards left")
+
+    def deal_hand(self):
+        return self._deal(), self._deal()
+
+    def deal_card(self):
+        return self._deal()
+
+    def _deal(self):
+        """
+
+        Returns: a card from our deck
+
+        """
+        return next(self)

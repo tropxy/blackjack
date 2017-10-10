@@ -72,5 +72,21 @@ def test_shuffle_deck():
     assert any(randomness)
 
 
-def deal_hands():
-    pass
+def test_len_deck():
+    deck = Deck()
+    assert len(deck) == 52
+
+
+def test_iter_deck():
+    deck = Deck()
+    assert next(deck) == Card('spade', 2)
+
+
+def test_deal_hands():
+    deck = Deck()
+    assert isinstance(deck.deal_card(), Card)
+    card1, card2 = deck.deal_hand()
+    assert isinstance(card1, Card)
+    assert isinstance(card2, Card)
+    assert card1 != card2
+
