@@ -1,0 +1,19 @@
+CHANGES
+=======
+
+0.0.1
+-----
+
+* Adding TCP Server and Client functionality and pbr
+* Turning class into an iterable one
+* New Tests
+* Methods Overload
+* Validate suite of a card
+* Start working on a Card class
+* Add initial project structure
+* Update README.md
+* Update README.md
+* Update README.md
+* fix link
+* Add demo of the game start
+* Initial commit
